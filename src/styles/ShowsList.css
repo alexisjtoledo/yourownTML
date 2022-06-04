@@ -14,6 +14,10 @@
   margin-top: 20px;
 }
 
+.shows-list-item-container.selected {
+  background-color: red;
+}
+
 .shows-container {
   display: flex;
   justify-content: flex-start;
