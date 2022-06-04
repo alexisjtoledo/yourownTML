@@ -1,0 +1,42 @@
+.show-container {
+  display: flex;
+  color: #181818;
+}
+
+.show-img-container {
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.show-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.show-name {
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+
+.show-stage {
+  font-size: 1em;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.show-day {
+  font-size: 0.8em;
+  color: #A0A0A0;
+  margin-bottom: 5px;
+}
+
+.show-time {
+  font-size: 0.8em;
+  color: #A0A0A0;
+}
