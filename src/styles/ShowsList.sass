@@ -14,8 +14,11 @@
 .shows-list-item-container:first-child
     margin-top: 20px
 
-.shows-list-item-container.selected
-    background-color: red
+.shows-list-item-container.selected:hover
+    background-color: $lightred
+
+.shows-list-item-container:hover
+    background-color: $lightgreen
 
 .shows-container
     display: flex
@@ -24,7 +27,22 @@
         left: 20px
 
 .shows-list
+    width: 600px
     padding: 0
+    margin:
+        left: 20px
+        top: 20px
+
+.shows-list:last-child
+    margin:
+        left: 50px
+
+.show-list-title
+    font-weight: $font-bold
+    font-size: $font-h3
+    margin: 
+        top: 20px
+        bottom: 20px
 
 .shows-list-item
     list-style-type: none

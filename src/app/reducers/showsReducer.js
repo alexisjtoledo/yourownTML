@@ -13,8 +13,11 @@ const showsReducer = (state = initialState, action) => {
             };
         case CHANGE_SELECTION_STATE:
             const updatedState = { ...state };
-            updatedState.shows[action.payload.id].selected =
-                action.payload.selected;
+            updatedState.shows.map(
+                (show) =>
+                    show.id === action.payload.id &&
+                    (show.selected = action.payload.selected),
+            );
             return updatedState;
         default:
             return state;

@@ -1,11 +1,13 @@
 @import variables
 
-
 .show-container
     display: flex
+    justify-content: space-between
     color: $black
+    width: 530px
 
-.show-details
+.show-information
+    display: flex
 
 .show-img-container
     width: 90px
@@ -21,23 +23,36 @@
     object-fit: cover
 
 .show-name
-    font-weight: $primary-font-bold
-    font-size: 1.3em
+    font-weight: $font-bold
+    font-size: $font-h4
     margin: 
         bottom: 5px
 
 .show-stage
-    font-size: 1em
+    font-size: $font-h6
     text-transform: capitalize
     margin:
         bottom: 10px
 
 .show-day
-    font-size: 0.8em
+    font-size: $font-p
     color: $lightgray
     margin:
         bottom: 5px
 
 .show-time
-    font-size: 0.8em
+    font-size: $font-p
     color: $lightgray
+
+.show-icon-container
+    align-self: center
+
+.show-add-icon
+    fill: $green
+    width: 25px
+    height: 25px
+
+.show-remove-icon
+    fill: $red
+    width: 25px
+    height: 25px
