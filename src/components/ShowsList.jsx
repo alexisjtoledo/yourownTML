@@ -23,46 +23,51 @@ const ShowsList = () => {
     };
 
     return (
-        <div className="shows-container">
-            <ul className="shows-list">
-                <h3 className="show-list-title">Available shows</h3>
-                {shows.showsList.shows.map(
-                    (show) =>
-                        !show.selected && (
-                            <div
-                                key={show.id}
-                                className={`shows-list-item-container ${
-                                    show.selected && "selected"
-                                }`}
-                                onClick={() => changeState(show)}
-                            >
-                                <li className="shows-list-item">
-                                    <Show data={show} />
-                                </li>
-                            </div>
-                        ),
-                )}
-            </ul>
-            <ul className="shows-list">
-                <h3 className="show-list-title">Selected shows</h3>
-                {shows.showsList.shows.map(
-                    (show) =>
-                        show.selected && (
-                            <div
-                                key={show.id}
-                                className={`shows-list-item-container ${
-                                    show.selected && "selected"
-                                }`}
-                                onClick={() => changeState(show)}
-                            >
-                                <li className="shows-list-item">
-                                    <Show data={show} />
-                                </li>
-                            </div>
-                        ),
-                )}
-            </ul>
-        </div>
+        <>
+            <div className="filter-container">
+                <h3 className="show-list-title">Filter by:</h3>
+            </div>
+            <div className="shows-container">
+                <ul className="shows-list">
+                    <h3 className="show-list-title">Available shows</h3>
+                    {shows.showsList.shows.map(
+                        (show) =>
+                            !show.selected && (
+                                <div
+                                    key={show.id}
+                                    className={`shows-list-item-container ${
+                                        show.selected && "selected"
+                                    }`}
+                                    onClick={() => changeState(show)}
+                                >
+                                    <li className="shows-list-item">
+                                        <Show data={show} />
+                                    </li>
+                                </div>
+                            ),
+                    )}
+                </ul>
+                <ul className="shows-list">
+                    <h3 className="show-list-title">Selected shows</h3>
+                    {shows.showsList.shows.map(
+                        (show) =>
+                            show.selected && (
+                                <div
+                                    key={show.id}
+                                    className={`shows-list-item-container ${
+                                        show.selected && "selected"
+                                    }`}
+                                    onClick={() => changeState(show)}
+                                >
+                                    <li className="shows-list-item">
+                                        <Show data={show} />
+                                    </li>
+                                </div>
+                            ),
+                    )}
+                </ul>
+            </div>
+        </>
     );
 };
 
