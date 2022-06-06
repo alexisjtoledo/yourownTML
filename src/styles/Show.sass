@@ -54,3 +54,23 @@
 
 .show-remove-icon
     fill: $red
+
+@media only screen and (min-width: 800px) and (max-width: 1000px)
+    .show-img-container
+        display: none
+
+@media only screen and (min-width: 0px) and (max-width: 800px)
+    .show-img-container
+        display: none
+    
+    .show-icon-container
+        display: none
+
+    .show-container
+        width: 35vw
+
+    .show-name
+        font-size: $font-h5
+
+    .show-stage
+        font-size: $font-h6

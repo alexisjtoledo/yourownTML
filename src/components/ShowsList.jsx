@@ -1,21 +1,27 @@
+/* COMPONENT IMPORTS */
 import React from "react";
 import Show from "./Show";
+/* STYLES IMPORTS */
 import "../styles/ShowsList.sass";
-
+/* STATE MANAGEMENT IMPORTS */
 import { useSelector, useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../app/index";
 
 const ShowsList = () => {
+    /* STATE MANAGEMENT */
     const dispatch = useDispatch();
-
     const { changeSelectionState } = bindActionCreators(
         actionCreators,
         dispatch,
     );
-
     const shows = useSelector((state) => state);
 
+    /**
+     * Handles the selection state of each item on the list.
+     * Updates the local storage with the new list for persistence.
+     * @returns {void}
+     */
     const changeState = (currentItem) => {
         const newItem = currentItem;
         newItem.selected = !currentItem.selected;
