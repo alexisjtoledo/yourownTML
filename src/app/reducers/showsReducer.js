@@ -1,8 +1,7 @@
 import { GET_SHOWS, CHANGE_SELECTION_STATE } from "../actions/index";
-import data from "../../data.json";
 
 const initialState = {
-    shows: data,
+    shows: {},
 };
 
 const showsReducer = (state = initialState, action) => {
@@ -10,6 +9,7 @@ const showsReducer = (state = initialState, action) => {
         case GET_SHOWS:
             return {
                 ...state,
+                shows: action.payload,
             };
         case CHANGE_SELECTION_STATE:
             const updatedState = { ...state };

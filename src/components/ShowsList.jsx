@@ -20,6 +20,7 @@ const ShowsList = () => {
         const newItem = currentItem;
         newItem.selected = !currentItem.selected;
         changeSelectionState(newItem);
+        localStorage.setItem("schedule", JSON.stringify(shows.showsList.shows));
     };
 
     return (
