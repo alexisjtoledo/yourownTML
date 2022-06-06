@@ -55,9 +55,6 @@
         left: 3vw
 
 @media only screen and (min-width: 0px) and (max-width: 800px)
-    .filter-container
-        margin: 
-            left: 3vw
 
     .shows-list-item-container
         padding: 20px
@@ -76,3 +73,10 @@
 
     .show-list-title
         font-size: $font-h5
+
+@media print 
+    .shows-container
+        display: none !important
+
+    .filter-container
+        display: none !important
