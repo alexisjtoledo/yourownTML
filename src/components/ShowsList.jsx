@@ -167,17 +167,17 @@ const ShowsList = () => {
                     {filteredShows.map(
                         (show) =>
                             !show.selected && (
-                                <div
+                                <li
                                     key={show.id}
                                     className={`shows-list-item-container ${
                                         show.selected && "selected"
                                     }`}
                                     onClick={() => changeState(show)}
                                 >
-                                    <li className="shows-list-item">
+                                    <div className="shows-list-item">
                                         <Show data={show} />
-                                    </li>
-                                </div>
+                                    </div>
+                                </li>
                             ),
                     )}
                 </ul>
