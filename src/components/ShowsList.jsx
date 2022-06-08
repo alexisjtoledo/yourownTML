@@ -33,6 +33,7 @@ const ShowsList = () => {
         newItem.selected = !currentItem.selected;
         changeSelectionState(newItem);
         localStorage.setItem("schedule", JSON.stringify(shows.showsList.shows));
+        resetFilters();
     };
 
     const normalizeString = (string) => {
