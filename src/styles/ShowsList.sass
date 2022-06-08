@@ -48,11 +48,62 @@
     list-style-type: none
 
 .filter-container
+    display: flex
     max-width: 100vw
     left: 0
     position: sticky
     padding: 
         left: 3vw
+
+.filter-input-container
+    display: flex
+    flex-direction: column
+    margin:
+        left: 3vw
+
+.filter-dropdown-container
+    display: flex
+    flex-direction: column
+
+.filter-label
+    color: $lightgray
+    font-size: $font-h5
+    margin:
+        bottom: 5px
+
+.filter-label:last-child
+    margin:
+        left: 20px
+        right: 0px
+
+.filter-input-box
+    border-radius: 5px
+    border: solid 1px $white
+    background-color: $white
+    width: 30vw
+    height: 40px
+    font-size: $font-h6
+    font-weight: $font-bold
+    color: $darkgray
+    padding: 
+        left: 10px
+    margin:
+        right: 3vw
+
+.filter-dropdown-box
+    border-radius: 5px
+    border: solid 1px $white
+    background-color: $white
+    width: 20vw
+    height: 45px
+    font-size: $font-h6
+    font-weight: $font-bold
+    color: $darkgray
+    padding: 
+        left: 10px
+    margin:
+        right: 3vw
+
 
 @media only screen and (min-width: 0px) and (max-width: 800px)
 
@@ -73,6 +124,28 @@
 
     .show-list-title
         font-size: $font-h5
+
+    .filter-container
+        flex-direction: column
+        
+    .filter-input-container
+        margin:
+            left: 0
+            bottom: 10px
+        
+    .filter-dropdown-container
+        margin:
+            bottom: 10px
+
+    .filter-dropdown-container:last-child
+        margin:
+            bottom: 0       
+
+    .filter-dropdown-box
+        width: 90vw
+
+    .filter-input-box
+        width: 87vw
 
 @media print 
     .shows-container

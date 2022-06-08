@@ -100,62 +100,64 @@ const ShowsList = () => {
     return (
         <>
             <div className="filter-container">
-                <h3 className="show-list-title">Filter by:</h3>
+                <h3 className="show-list-title">Search by:</h3>
                 <div className="filter-input-container">
-                    <label className="filter-input-label">
-                        By name:
-                        <input
-                            id="name"
-                            type="text"
-                            onChange={(e) => setInputQuery(e.target.value)}
-                            onClick={resetFilters}
-                            className="filter-input-box"
-                            value={inputQuery}
-                        />
+                    <label for="name-input" className="filter-label">
+                        Name:
                     </label>
+                    <input
+                        id="name-input"
+                        type="text"
+                        onChange={(e) => setInputQuery(e.target.value)}
+                        onClick={resetFilters}
+                        className="filter-input-box"
+                        value={inputQuery}
+                    />
                 </div>
-                <div className="filter-dropdowns-container">
-                    <label className="filter-dropdown-label">
-                        By stage:
-                        <select
-                            className="filter-dropdown-box"
-                            onChange={(e) => setStageSelector(e.target.value)}
-                            onClick={resetFilters}
-                            value={stageSelector}
-                        >
-                            <option value="default">All</option>
-                            <option value="mainstage">Mainstage</option>
-                            <option value="freedom">Freedom</option>
-                            <option value="rose garden">Rose Garden</option>
-                            <option value="harbour house">Harbour House</option>
-                            <option value="youphoria">Youphoria</option>
-                            <option value="cage">Cage</option>
-                            <option value="leaf">Leaf</option>
-                            <option value="the rave cave">The Rave Cave</option>
-                            <option value="crystal garden">
-                                Crystal Garden
-                            </option>
-                            <option value="kara savi">Kara Savi</option>
-                            <option value="core">Core</option>
-                            <option value="atmosphere">Atmosphere</option>
-                            <option value="the library">The Library</option>
-                            <option value="moosebar">Moosebar</option>
-                        </select>
+                <div className="filter-dropdown-container">
+                    <label for="stage-selector" className="filter-label">
+                        Stage:
                     </label>
-                    <label className="filter-dropdown-label">
-                        By day:
-                        <select
-                            className="filter-dropdown-box"
-                            value={daySelector}
-                            onChange={(e) => setDaySelector(e.target.value)}
-                            onClick={resetFilters}
-                        >
-                            <option value="0">All</option>
-                            <option value="1">Day 1</option>
-                            <option value="2">Day 2</option>
-                            <option value="3">Day 3</option>
-                        </select>
+                    <select
+                        className="filter-dropdown-box"
+                        onChange={(e) => setStageSelector(e.target.value)}
+                        onClick={resetFilters}
+                        value={stageSelector}
+                        id="stage-selector"
+                    >
+                        <option value="default">All</option>
+                        <option value="mainstage">Mainstage</option>
+                        <option value="freedom">Freedom</option>
+                        <option value="rose garden">Rose Garden</option>
+                        <option value="harbour house">Harbour House</option>
+                        <option value="youphoria">Youphoria</option>
+                        <option value="cage">Cage</option>
+                        <option value="leaf">Leaf</option>
+                        <option value="the rave cave">The Rave Cave</option>
+                        <option value="crystal garden">Crystal Garden</option>
+                        <option value="kara savi">Kara Savi</option>
+                        <option value="core">Core</option>
+                        <option value="atmosphere">Atmosphere</option>
+                        <option value="the library">The Library</option>
+                        <option value="moosebar">Moosebar</option>
+                    </select>
+                </div>
+                <div className="filter-dropdown-container">
+                    <label for="day-selector" className="filter-label">
+                        Day:
                     </label>
+                    <select
+                        id="day-selector"
+                        className="filter-dropdown-box"
+                        value={daySelector}
+                        onChange={(e) => setDaySelector(e.target.value)}
+                        onClick={resetFilters}
+                    >
+                        <option value="0">All</option>
+                        <option value="1">Day 1</option>
+                        <option value="2">Day 2</option>
+                        <option value="3">Day 3</option>
+                    </select>
                 </div>
             </div>
             <div className="shows-container">
